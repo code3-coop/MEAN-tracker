@@ -1,0 +1,12 @@
+{
+  "name": "MEAN-tracker",
+  "description": "Bug tracker as exemple for MEAN(Mongo, Express, Angular, Node)",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "express": "3.x",
+    "coffee-script":"1.6.3",
+    "jade": "0.35.0",
+    "stylus": "0.37.0"
+  }
+}
