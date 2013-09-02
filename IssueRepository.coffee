@@ -7,6 +7,7 @@ exports.createIssue = (req, res)->
   issue = req.body
   issue.id= store.length+1
   store.push issue
+  res.send "store.length"
 
 exports.getIssue = (req,res)->
   id = req.id
