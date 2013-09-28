@@ -30,3 +30,8 @@ exports.updateIssue = (req,res)->
     then return req.body
     else return issue
   store = issues
+
+exports.openIssues = (req,res)->
+  openIssues = store.filter (issue)->
+    issue.status == "closed"
+  res.json openIssues

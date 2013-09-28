@@ -6,10 +6,20 @@
       .badge {{issue.type}}       
       .badge {{issue.priority}}
     
-    p {{issue.text}}  
-.btn.btn-success Add comment
-.row-flex(ng-show="issue.comments") Comments
-  .row( comment in issue.comments)
+    p {{issue.text}}
+.row-flex(ng-show="issue.comments")
+    h2 Comments 
+      span.badge {{issue.comments.length}}
+    .row-flex(ng-show="issue.comments")
+        .row-flex( comment in issue.comments)
+button.btn(ng-hide="showCommentBox",ng-click="showCommentBox()" )
+    i.icon-plus
+    | Add comment
+.row(ng-show="showCommentBox")
+    textArea.offset1.span8(rows=4)
+    .btn.btn-primary.offset1(ng-click="addComment()") Add
+
+
 
 .btn-toolbar.pull-right
   a( ng-click="saveIssue()").btn.btn-primary Edit

@@ -22,10 +22,11 @@ app.get "/", (req,res)->
 app.get '/partials/:name.html', (req,res)->
   res.render "partials/#{req.params.name}"
 
-app.get "/api/issues", issueRepository.findAll
+app.get  "/api/issues", issueRepository.findAll
+app.get  "/api/issues/open", issueRepository.openIssues
 app.post "/api/issue", issueRepository.createIssue
-app.get "/api/issue/:id", issueRepository.getIssue
-app.put "/api/issue/:id", issueRepository.updateIssue
+app.get  "/api/issue/:id", issueRepository.getIssue
+app.put  "/api/issue/:id", issueRepository.updateIssue
 
 app.listen 3000
 console.log 'Listening on port 3000'
