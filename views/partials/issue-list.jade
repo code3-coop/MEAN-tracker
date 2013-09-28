@@ -1,0 +1,17 @@
+table.table.table-hover
+  thead
+    tr
+      th #
+      th Title
+      th Type
+      th Priority
+      th Created on
+      th Author
+  tbody
+    tr(ng-repeat="issue in issueList")
+      td 
+        a(ng-href="#/issue/{{issue.id}}") {{issue.title}}
+      td {{issue.type}}
+      td {{issue.priority}}
+      td {{issue.createdOn}}
+      td {{issue.author}}

@@ -8,17 +8,18 @@ html(ng-app="issuetracker")
   link(rel='stylesheet', href='/css/bootstrap.css')
   
   body
-  header
     h1 MEAN-Issue tracker
-  .row
-    .well.span2
-      ul.unstyled
-        li
-          a(ng-href="#issue/new") new issue
-        li
-          a(ng-href="#issues") all issues
-        li
-          a(ng-href="#issue/query") open issue by id 
-    .span10( ng-view )
+    .container-fluid
+      
+      .row-fluid
+        .well.span2
+          ul.unstyled
+          li
+            a(ng-href="#issue/new") new issue
+          li
+            a(ng-href="#issues") all issues
+          li
+            a(ng-href="#issue/query") open issue by id 
+        .span10( ng-view )
         
         

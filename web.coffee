@@ -13,9 +13,7 @@ app.use stylus.middleware(
   src: __dirname + '/public'
   compile: compile
 )
-app.use express.bodyParser({
-  keepExtensions: true, 
-  uploadDir: '/my/files' })
+app.use express.bodyParser()
 
 app.use express.static __dirname + '/public'
 
